@@ -1,0 +1,7 @@
+{
+  "name": "Plantr",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

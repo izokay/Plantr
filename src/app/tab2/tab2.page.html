@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Plantr Library
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let item of json_arr_fin">
+  <ion-item>
+  <ion-card>
+    <ion-card-header>
+        <ion-card-title>Plant Name: {{ item.plant_name }}</ion-card-title>
+        <ion-card-subtitle>Scientific Name: {{ item.plant_scientific_name }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Plantr ID: {{ item._id }}</p>
+      <br>
+      <p>Necessary Amount of Water: {{ item.required_water_milliliters }} ml</p>
+      <br>
+      <p>Necessary Humidity: {{ item.required_humidity_grams }} g/m3</p>
+      <br>
+      <p>Necessary Temperature: {{ item.required_temperature_celcius }} C</p>
+      <br>
+    </ion-card-content>
+    <ion-button (click)="sendChosen(item._id)" color="primary">Use Plant</ion-button>
+  </ion-card>
+  </ion-item>
+  </ion-list>
+
+</ion-content>
